@@ -1,0 +1,129 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e365c, #c6a4e6);
+    font-family: Arial, sans-serif;
+}
+
+/* Popup animation */
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.calculator {
+    background: linear-gradient(135deg, #ffffff, #f5f7fa);
+    background-size: 300% 300%;
+    padding: 25px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-align: center;
+
+    /* Animation & flow */
+    animation: flow 6s ease infinite;
+    transition: transform 0.6s ease, background-color 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Flow hover effect */
+.calculator:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+    background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+}
+
+.calculator h2 {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    text-align: left;
+}
+
+input {
+    width: 100%;
+    background: linear-gradient(135deg, #ffffff, #f2f2f2);
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease; background-color: 0.4s ease;
+}
+input:hover {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+}
+input:focus {
+    outline: none;
+    border: 2px solid #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    margin: 5px 1%;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #43cea2, #185a9d);
+    background-size: 300% 300%;
+    color: white;
+
+    /* Smooth hover flow */
+    transition: background-color 0.4s ease, transform 0.25s ease; box-shadow: 0.2s ease;
+}
+
+/* Button hover animation */
+button:hover {
+    background: linear-gradient(135deg, #2196F3, #21CBF3);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    animation: flow 4s ease infinite;
+}
+
+/* Button click feedback */
+button:active {
+    transform: scale(0.95);
+}
+
+.clear {
+    width: 100%;
+    background: linear-gradient(135deg, #ff6a6a, #ff3d3d);
+    background-size: 300% 300%;
+}
+
+.clear:hover {
+    background: linear-gradient(135deg, #d32f2f, #ff5252);
+    animation: flow 4s ease infinite;
+}
+
+#resultDisplay {
+    margin-top: 15px;
+    padding: 10px;
+    background: linear-gradient(135deg, #f7f7f7, #ffffff);
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.4s ease, transform 0.3s ease;
+}
+
+/* Result hover glow */
+#resultDisplay:hover {
+    background: linear-gradient(135deg, #e3f2fd, #f1f8ff);
+
+    transform: scale(1.03);
+}
